@@ -1,3 +1,65 @@
-<html>
-<h1> Test </h1>
+<!DOCTYPE html>
+<html data-lt-installed=true style="" lang="en-US">
+<head>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width,initial-scale=1">
+	<meta name=theme-color content=#000000>
+	<title>Mayur's Github Page</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+	<noscript class=sf-hidden>You need to enable JavaScript to run this app!</noscript>
+	<div id=home class="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0 jumbotron jumbotron-fluid" style="overflow:hidden;background:rgba(0,0,0,0) linear-gradient(136deg,rgb(68,132,206),rgb(26,215,192),rgb(255,155,17),rgb(155,89,182),rgb(255,127,127),rgb(236,240,241)) repeat scroll 0% 0% / 1200% 1200%">
+	<div id=stars></div>
+		<div class="text-center container">
+			<h1 id="myDiv" class=display-1>  </h1>
+			<div class="Typist lead typist">Software Engineer | Android | Automotive HMI | Mobile Apps ツ</div>
+			<div class="Typist lead typist">AAOS | In Vechical Infotainment</div>
+            <br>
+            <iframe width="720" height="420"   frameBorder="0" src="https://www.youtube.com/embed/FgcmJVA421E"> </iframe>
+
+                <br><br>
+				<a target=_blank rel="noopener noreferrer" aria-label="GitHub" href=https://github.com/mtangler><i class="fab fa-github fa-3x socialicons"></i></a>
+				<a target=_blank rel="noopener noreferrer" aria-label="LinkedIn" href='https://www.linkedin.com/in/mayurcmn'><i class="fab fa-linkedin fa-3x socialicons"></i></a>
+
+
+		</div>
+	</div>
+
+<script>
+
+/* function encode(text, offset) {
+    var encoded = "";
+    for (var i = 0; i < text.length; i++) {
+        var charCode = text.charCodeAt(i);
+        var encodedCharCode = charCode + offset;
+        encoded += String.fromCharCode(encodedCharCode);
+    }
+    return encoded;
+} */
+
+function decode(encodedText, offset) {
+    var decoded = "";
+    for (var i = 0; i < encodedText.length; i++) {
+        var charCode = encodedText.charCodeAt(i);
+        var decodedCharCode = charCode - offset;
+        decoded += String.fromCharCode(decodedCharCode);
+    }
+    return decoded;
+}
+
+var originalText = "ֆֲ֚֮֫ՙռ֧֚֚֮֡֡";
+var offset = 1337;
+// var encodedText = encode(originalText, offset);
+var decodedText = decode(originalText, offset);
+
+var divElement = document.getElementById("myDiv");
+var newText = document.createTextNode(decodedText);
+divElement.appendChild(newText);
+
+</script>
+
+</body>
 </html>
